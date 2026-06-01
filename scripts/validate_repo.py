@@ -35,7 +35,11 @@ def main():
         "03_yazilim_matematik_pipeline/labs/01_quaternion_basics.py",
         "03_yazilim_matematik_pipeline/labs/02_vr_runtime_loop.py",
         "04_ag_guvenlik/labs/01_udp_snapshot_simulator.py",
-        "04_ag_guvenlik/labs/02_secure_avatar_sync.py"
+        "04_ag_guvenlik/labs/02_secure_avatar_sync.py",
+        "05_haptik_kinematik/labs/01_vibration_frequency_analyzer.py",
+        "05_haptik_kinematik/labs/02_inverse_kinematics_arm.py",
+        "06_uzamsal_ses/labs/01_doppler_effect_sim.py",
+        "06_uzamsal_ses/labs/02_hrtf_binaural_panning.py"
     ]
     
     all_passed = True

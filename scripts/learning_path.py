@@ -15,9 +15,11 @@ def main():
     print("2. Performans ve Edge-AI (Foveated Rendering, Latency)")
     print("3. Uzamsal Matematik (Quaternion, Render Loop)")
     print("4. Ağ ve Güvenlik (UDP, Replay Attacks)")
-    print("5. Çıkış\n")
+    print("5. Haptik Geri Bildirim ve Kinematik (Titreşim, IK)")
+    print("6. Uzamsal Ses (Doppler, HRTF)")
+    print("7. Çıkış\n")
     
-    choice = input("Seçiminiz (1-5): ")
+    choice = input("Seçiminiz (1-7): ")
     
     clear_screen()
     if choice == '1':
@@ -67,8 +69,32 @@ def main():
             print("Doğru! Düşük gecikme için UDP tercih edilir.")
         else:
             print("Cevap UDP olmalıydı.")
-            
+
     elif choice == '5':
+        print("--- Modül 5: Haptik Geri Bildirim ve Kinematik ---")
+        print("Tavsiye edilen laboratuvarlar:")
+        print("  python 05_haptik_kinematik/labs/01_vibration_frequency_analyzer.py")
+        print("  python 05_haptik_kinematik/labs/02_inverse_kinematics_arm.py")
+        print("\nMini Soru: Kumandanın ve gözlüğün pozisyonunu bilip, kolların duruşunu hesaplamaya ne denir? (Kısaltma)")
+        ans = input("Cevabınız: ").upper()
+        if "IK" in ans or "INVERSE KINEMATICS" in ans:
+            print("Harika! Ters Kinematik (IK) doğru cevap.")
+        else:
+            print("Cevap IK (Ters Kinematik) olmalıydı.")
+            
+    elif choice == '6':
+        print("--- Modül 6: Uzamsal Ses ---")
+        print("Tavsiye edilen laboratuvarlar:")
+        print("  python 06_uzamsal_ses/labs/01_doppler_effect_sim.py")
+        print("  python 06_uzamsal_ses/labs/02_hrtf_binaural_panning.py")
+        print("\nMini Soru: Başımızın şeklinden dolayı seste oluşan transfer fonksiyonuna ne denir? (Kısaltma)")
+        ans = input("Cevabınız: ").upper()
+        if "HRTF" in ans:
+            print("Süper! HRTF uzamsal sesin kalbidir.")
+        else:
+            print("Cevap HRTF olmalıydı.")
+            
+    elif choice == '7':
         print("Çıkış yapılıyor. VR yolculuğunda başarılar!")
         
     else:
