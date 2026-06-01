@@ -8,6 +8,18 @@
 
 > Dijital kodun fiziksel donanımla buluştuğu noktada, sürükleyici (immersive) sistemlerin mimarisini sıfırdan anlamak ve otonom/etkileşimli ortamlar inşa etmek için hazırlanan açık kaynaklı araştırma ve geliştirme rehberi.
 
+---
+
+## 🔭 Vizyon Köşesi
+
+**"Gerçeklik, beynimizin elektrik sinyallerine verdiği bir tepkiden ibaretse, bu sinyalleri mühendislikle ne kadar bükebiliriz?"**
+
+Bizler sanal gerçekliği (VR) yalnızca eğlence odaklı bir son kullanıcı deneyimi veya oyun oynamak için tasarlanmış bir araç olarak görmüyoruz. Aksine, **insan algısının sınırlarını zorlayan, makinelerin dünyayı nasıl anladığını test eden ve fizik kurallarını dijital ortamda yeniden yazmamızı sağlayan bir bilim dalı** olarak ele alıyoruz. 
+
+Bu havuzda, salt kod yazmanın ötesine geçerek; sensörlerin nasıl kandırılabileceğini, yapay zekanın görüntü işlemedeki devrimini ve bir makinenin "görme" eylemini milisaniyeler içinde nasıl gerçekleştirdiğini **Meta-Mühendislik** yaklaşımıyla inceleyeceğiz. Amacımız sadece VR donanımını kullanmak değil, bu donanımın ruhunu, matematiğini ve sınırlarını keşfetmektir.
+
+---
+
 Sanal gerçeklik (VR) sistemlerini yalnızca eğlence odaklı bir son kullanıcı deneyimi olarak görmüyoruz. Bu depo; uçta işleme (edge computing), sensör füzyonu, düşük gecikmeli sistem mimarisi ve **Epistemik Teknoloji Felsefesi** çerçevesinde, makinelerin "gerçekliği" nasıl algıladığını ve işlediğini inceleyen bağımsız araştırmacılar (autodidact) için bir yol haritasıdır.
 
 Amacımız: Salt manuel kodlamadan çıkarak, donanım seviyesinde sorun gidermeyi ve algoritmik verimliliği merkeze alan **Meta-Mühendislik** yaklaşımını VR teknolojilerine uygulamaktır.
