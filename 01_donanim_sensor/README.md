@@ -1,28 +1,16 @@
-# Modul 1: Donanim ve Sensor Mimarisi
+# Modül 1: Donanım Mimarisi ve Sensör Füzyonu
 
-## Hedef
+Sanal gerçeklikte dijital objelerin yerçekimi, başımızın dönüşü ve doğrusal ivmemizi bilmesi tamamen **sensör füzyonu (sensor fusion)** sayesindedir.
 
-Bir VR basliginin fiziksel sinirlarini ve sensor verisinin neden ham haliyle
-kullanilamayacagini anlamak.
+## Teorik Altyapı
+- **IMU (Inertial Measurement Unit)**: İvmeölçer (Accelerometer), Jiroskop (Gyroscope) ve Manyetometre içerir.
+- **Drift (Sapma)**: Jiroskoplar zamanla biriken hatalar (integral alımından dolayı) üretir. Buna drift denir.
+- **Kalman Filtresi**: Farklı sensörlerden gelen gürültülü veriyi, matematiksel bir modelle birleştirip "en olası" gerçek durumu (state estimation) bulmamızı sağlar.
+- **Görüş Alanı (FOV - Field of View)**: Optik lensin ekrandaki pikselleri gözümüze ne kadar geniş bir açıyla iletebildiğini belirler.
 
-## Ana Kavramlar
+## Laboratuvar (Pratik Uygulamalar)
+`labs/` klasöründeki dosyaları çalıştırarak aşağıdaki kavramları pratik edebilirsiniz:
 
-- HMD optigi: lens distorsiyonu, FOV, IPD, ekran cozunurlugu.
-- IMU: ivmeolcer, jiroskop, manyetometre, bias ve drift.
-- Sensor fuzyonu: complementary filter, Kalman fikri, zaman damgasi uyumu.
-- Haptik: PWM, frekans, siddet, insan algisi ve guvenli calisma araligi.
-
-## Lab
-
-```bash
-python 01_donanim_sensor/labs/imu_complementary_filter.py
-```
-
-Lab, sentetik IMU verisinden roll acisini tahmin eder ve jiroskop drift'inin
-ivmeolcerle nasil dengelendigini gosterir.
-
-## Kontrol Listesi
-
-- IMU verisinde bias neden olusur?
-- Complementary filter'da alpha artarsa hangi sensor daha baskin olur?
-- HMD'de refresh rate ve motion sickness arasindaki iliski nedir?
+1. `01_imu_drift_simulator.py`: Jiroskop drift problemini görselleştirir.
+2. `02_kalman_filter_1d.py`: 1 boyutlu ortamda gürültülü sensör okumalarından gerçek değeri bulur.
+3. `03_fov_calculator.py`: Ekran boyutu ve lens mesafesi (focal length) parametrelerinden FOV değerini hesaplar.

@@ -1,26 +1,14 @@
-# Modul 2: Edge-AI ve Performans Optimizasyonu
+# Modül 2: Edge-AI ve Performans
 
-## Hedef
+Sanal gerçeklik cihazları, bulut sunucularına bağımlı kalmadan **kendi içlerinde (On-Premise / Edge)** karmaşık işlemleri yapabilmelidir. Yüksek çözünürlük, yapay zeka modelleri ve düşük gecikme bir araya geldiğinde donanım darboğazları oluşur.
 
-VR sistemlerinde performansi tek bir FPS sayisi yerine uc uca gecikme zinciri
-olarak modellemek.
+## Teorik Altyapı
+- **Foveated Rendering**: İnsan gözünün sadece odaklandığı noktayı net (fovea bölgesi), çevreyi ise bulanık (çevresel vizyon) görmesinden ilham alır. GPU gücünü sadece bakılan noktada yüksek çözünürlüğe harcamaktır.
+- **Motion-to-Photon Latency**: Kullanıcının kafasını çevirdiği an (motion) ile bu değişimin ekrana yansıdığı an (photon) arasındaki gecikmedir. VR için altın kural <20ms olmasıdır.
+- **Model Budama (Pruning) & Kuantizasyon**: Yapay zeka modellerinin (ör. el takibi) gözlüğün kısıtlı işlemcisinde çalışabilmesi için 32-bit'ten 8-bit'e sıkıştırılmasıdır.
 
-## Ana Kavramlar
+## Laboratuvar (Pratik Uygulamalar)
+`labs/` klasöründeki dosyaları çalıştırarak aşağıdaki kavramları pratik edebilirsiniz:
 
-- Motion-to-photon latency: sensor, prediction, render, compositor, display.
-- Foveated rendering: bakis noktasina yakin bolgeye daha yuksek kalite ayirma.
-- Edge model optimizasyonu: pruning, quantization, batching ve thermal budget.
-- Profiling: p95/p99 gecikme, frame pacing, dropped frame.
-
-## Lab
-
-```bash
-python 02_edge_ai_performans/labs/latency_budget.py
-python 02_edge_ai_performans/labs/foveated_tile_planner.py
-```
-
-## Kontrol Listesi
-
-- 90 Hz hedefte frame butcesi kac milisaniyedir?
-- p95 gecikme neden ortalamadan daha onemlidir?
-- Goz takip verisi gec gelirse foveated rendering hangi artefaktlari uretebilir?
+1. `01_foveated_tile_planner.py`: Ekranı bölgelere (tile) bölerek, bakış açısına göre hangi bölgelerin yüksek, hangi bölgelerin düşük çözünürlükte çizileceğini belirleyen algoritma simülatörü.
+2. `02_latency_profiler.py`: Motion-to-photon gecikmesinin hangi aşamalarda (sensör okuma, render, ağ) oluştuğunu inceleyen simülasyon profil aracı.
