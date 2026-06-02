@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="assets/vr_engineering_banner.png" alt="VR Engineering 101 Banner" width="100%">
+</p>
 
 # 🌌 Sanal Gerçeklik Mühendisliği 101: Epistemik ve Otonom Sistemler (VR Engineering 101)
 
